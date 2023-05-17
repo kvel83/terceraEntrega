@@ -51,9 +51,6 @@ let productosDisponibles = [
 let productosLista = [];
 
 const agregarALista = (productoSeleccionado) => {
-    // const productoSeleccionado = productosDisponibles.find(
-        // producto => producto.tipo === opcion && opciones === producto.nombre
-    // );
     let index = productosLista.findIndex(producto => producto.nombre === productoSeleccionado.nombre.toUpperCase());
     if (index > -1) {
         productosLista[index].aumentarCantidad()
@@ -91,7 +88,6 @@ const imprimirOpciones = opcion => {
 };
 
 let deseaSeguir = prompt("Bienvenido a tu lista de compras, ¿deseas agregar algo? (si/no)");
-
 if (deseaSeguir.toLowerCase() === "si") {
     let opcion = 0;
     let opcionNumber = 0;
